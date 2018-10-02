@@ -1,8 +1,7 @@
 const TeleBot = require('telebot');
 
-const bot = new TeleBot(`633444483:AAHRoLolxGilji5XvsID8LtqiNNqG3OtkhQ`);
-const myId = `69462703`;
-const chatId = `-111585222`;
+const bot = new TeleBot(//YOUR TOKEN);
+const chatId = //CHAT-ID;
 const sendMsg = function (news) {
 	bot.sendMessage(chatId, news);
 };
