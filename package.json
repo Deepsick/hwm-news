@@ -1,7 +1,7 @@
 {
   "name": "hwm-status",
   "version": "1.0.0",
-  "description": "",
+  "description": "Get the last piece of forum news",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,6 @@
     "cheerio": "^1.0.0-rc.2",
     "moment-timezone": "^0.5.21",
     "needle": "^2.2.2",
-    "npm": "^6.4.0",
     "telebot": "^1.2.6"
   }
 }
