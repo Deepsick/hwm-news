@@ -4,6 +4,7 @@ const telebot = require(`./telebot`);
 const needle = require(`needle`);
 const cheerio = require("cheerio");
 
+const TIMEZONE = `Europe/Moscow`;
 /**
  * Scrub our news and save it to news-data.json
  */
@@ -13,7 +14,7 @@ const getNews = function () {
 	needle.get(FORUM_LINK, (err, res) => {
 		if (err) throw(err);
 
-		const formattedDate = date.getFormattedDate();
+		const formattedDate = date.getFormattedDate(TIMEZONE);
 		
 		let $ = cheerio.load(res.body);
 		let linkWithoutDomen;
