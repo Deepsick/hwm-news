@@ -1,7 +1,5 @@
 const parser = require(`./parser`);
 
-const startServer = function () {
-		parser.getNews();
-};
+const startServer = () => parser.getNews();
 
 startServer();
