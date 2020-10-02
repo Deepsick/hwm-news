@@ -1,8 +1,7 @@
 const moment = require(`moment-timezone`);
 
-const getFormattedDate = function () {
-	const TIMEZONE = `Europe/Moscow`;
-	const fullDate = moment(new Date()).tz(TIMEZONE).format();
+const getFormattedDate = (timezone) => {
+	const fullDate = moment(new Date()).tz(timezone).format();
 	const currentDate = fullDate.split(`T`)[0];
 	const separation = `-`;
 	const date = {
