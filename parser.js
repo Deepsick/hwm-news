@@ -7,10 +7,8 @@ const cheerio = require("cheerio");
 /**
  * Scrub our news and save it to news-data.json
  */
-const getNews = function () {
-	const FORUM_LINK = `http://www.heroeswm.ru/forum_thread.php?id=2`;
-	const DOMEN = `http://www.heroeswm.ru/`;
-	needle.get(FORUM_LINK, (err, res) => {
+const getNews = (link, domen) => {
+	needle.get(link, (err, res) => {
 		if (err) throw(err);
 
 		const formattedDate = date.getFormattedDate();
@@ -24,7 +22,7 @@ const getNews = function () {
 			}
 		});
 
-		const newsLink = DOMEN + linkWithoutDomen;
+		const newsLink = domen + linkWithoutDomen;
 		needle.get(newsLink, (err, res) => {
 			if (res) {
 				$ = cheerio.load(res.body);
